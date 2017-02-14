@@ -26,7 +26,7 @@ public class MergeSortTester
 
 	int[] a = new int[n];
 	for (int x = 0; x < a.length; x++){
-	    a[x] = Math.pow(2,30) * Math.random();
+	    a[x] = (int)(5000 * Math.random());
 	}
 	
 	System.out.print(a);
@@ -51,6 +51,7 @@ public class MergeSortTester
 
 	int[] A = genRandomData(100);
 	mergeObj.pass = 0;
+	mergeObj.printArray(A); 
 	mergeObj.sort(A);
 	System.out.println(mergeObj.pass);
 
