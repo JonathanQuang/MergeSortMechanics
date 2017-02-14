@@ -19,8 +19,22 @@
   <INSERT YOUR RESULTS ANALYSIS HERE>
   ======================================*/
 
-public class MergeSortTester 
+public class MergeSortTester
 {
+    
+    public static int[] genRandomData(int n){
+
+	int[] a = new int[n];
+	for (int x = 0; x < a.length; x++){
+	    a[x] = Math.pow(2,30) * Math.random();
+	}
+	
+	System.out.print(a);
+	return a;
+    }
+
+
+
 
     /******************************
      * execution time analysis 
@@ -30,6 +44,18 @@ public class MergeSortTester
      ******************************/
     public static void main( String[] args ) 
     {
+	int[] blergh = {9,2,76,1463,793,275,173,1234};
+	MergeSort mergeObj = new MergeSort();
+	mergeObj.sort(blergh);
+	System.out.println(mergeObj.pass);
+
+	int[] A = genRandomData(100);
+	mergeObj.pass = 0;
+	mergeObj.sort(A);
+	System.out.println(mergeObj.pass);
+
+
+
 
     }//end main
 
