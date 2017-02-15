@@ -29,7 +29,8 @@ public class MergeSortTester
 	    a[x] = (int)(5000 * Math.random());
 	}
 	
-	System.out.print(a);
+	
+	
 	return a;
     }
 
@@ -54,6 +55,15 @@ public class MergeSortTester
 	mergeObj.printArray(A); 
 	mergeObj.sort(A);
 	System.out.println(mergeObj.pass);
+
+	for (int x = 50; x < 1050; x += 50){
+	    System.out.print("\n" + x);
+	    mergeObj.pass=0;
+	    int[] derp = genRandomData(x);
+	    mergeObj.sort(derp);
+	    System.out.print(": " + mergeObj.pass);
+
+	}
 
 
 
