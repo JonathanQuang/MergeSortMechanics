@@ -7,21 +7,29 @@
   class MergeSortTester
 
   ALGORITHM:
-  <INSERT YOUR DISTILLATION OF ALGO HERE>
+  The mergesort algorithim splits a list of integers into halves 
+  (or near halves) recursively until there are only lists of length 1. Then an
+  algorithim for merging two sorted lists is applied to the halves
+  recursively until we get a list of the original length.
 
   BIG-OH CLASSIFICATION OF ALGORITHM:
-  <INSERT YOUR EXECUTION TIME CATEGORIZATION OF MERGESORT HERE>
+  nlog(n)
 
   Mean execution times for dataset of size n:
   Batch size: <# of times each dataset size was run>
-  n=1       time: 
-  n=10      time: 
-  n=100     time: 
+  n=1       time: 0
+  n=10      time: 43
+  n=100     time: 771
   ...
-  n=<huge>  time: 
+  n=1000  time: 10975
 
   ANALYSIS:
-  <INSERT YOUR RESULTS ANALYSIS HERE>
+  The anaylsis of our results coincides closely with a BIG-OH classification
+  of mergesort. We used desmos to guess and check constants of nlog(n) and
+  we found that the function acurately described our experimental data.
+  Do note that as an algorithm of nlog(n) becomes larger, its graph
+  begins to look more and more like a line, which is why we tested 
+  the algorithm with small, medium, and large datasets.
   ======================================*/
 
 public class MergeSortTester
@@ -40,9 +48,12 @@ public class MergeSortTester
 
     /******************************
      * execution time analysis 
-     * <INSERT YOUR DESCRIPTION HERE OF 
-     *  YOUR APPARATUS FOR GENERATING EXECUTION 
-     *  TIME DATA...>
+     * We first made a function that took length n as an input
+     * It would return an integer array of length n with random numbers
+     * from 0-4999. 
+     * The MergeSort.java file was modified to be instantiable and to
+     * have an instance variable called pass that kept track of the runtime
+     * We use for loops to test arrays of various sizes
      ******************************/
     public static void main( String[] args ) 
     {
