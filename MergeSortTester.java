@@ -1,3 +1,8 @@
+// Team MergeSortMechanics - Joelle Lum, Samantha Ngo, Jonathan Quang
+// APCS2 - pd1
+// HW07
+// 2017-02-13
+
 /*======================================
   class MergeSortTester
 
