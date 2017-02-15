@@ -43,6 +43,15 @@ public class MergeSortTester
     {
 	MergeSort mergeObj = new MergeSort();
 
+	System.out.println("Biggest number lengths");
+	for (int x = 1000; x < 1000; x += 1000){
+	    System.out.print("\n" + x);
+	    mergeOb.pass = 0;
+	    int[] derp = genRandomData(x);
+	    mergeObj.sort(derp);
+	    System.out.println(": " + mergeObj.pass);
+	}
+	System.out.println("\n----------------");
 	System.out.println("Big number lengths");
 	for (int x = 50; x < 1050; x += 50){
 	    System.out.print("\n" + x);
