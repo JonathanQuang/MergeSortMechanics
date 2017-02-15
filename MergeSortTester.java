@@ -23,14 +23,10 @@ public class MergeSortTester
 {
     
     public static int[] genRandomData(int n){
-
 	int[] a = new int[n];
 	for (int x = 0; x < a.length; x++){
 	    a[x] = (int)(5000 * Math.random());
 	}
-	
-	
-	
 	return a;
     }
 
@@ -45,17 +41,7 @@ public class MergeSortTester
      ******************************/
     public static void main( String[] args ) 
     {
-	int[] blergh = {9,2,76,1463,793,275,173,1234};
 	MergeSort mergeObj = new MergeSort();
-	mergeObj.sort(blergh);
-	System.out.println(mergeObj.pass);
-
-	int[] A = genRandomData(100);
-	mergeObj.pass = 0;
-	mergeObj.printArray(A); 
-	mergeObj.sort(A);
-	System.out.println(mergeObj.pass);
-
 
 	System.out.println("Big number lengths");
 	for (int x = 50; x < 1050; x += 50){
@@ -64,9 +50,8 @@ public class MergeSortTester
 	    int[] derp = genRandomData(x);
 	    mergeObj.sort(derp);
 	    System.out.print(": " + mergeObj.pass);
-
 	}
-
+	System.out.println("\n----------------");
 	System.out.println("Smaller number lengths");
 	
 	for (int x = 1; x < 20; x += 1){
@@ -75,11 +60,7 @@ public class MergeSortTester
 	    int[] derp = genRandomData(x);
 	    mergeObj.sort(derp);
 	    System.out.print(": " + mergeObj.pass);
-
 	}
-
-
-
     }//end main
 
 }//end class
