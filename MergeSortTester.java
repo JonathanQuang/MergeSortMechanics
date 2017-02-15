@@ -43,16 +43,16 @@ public class MergeSortTester
     {
 	MergeSort mergeObj = new MergeSort();
 
-	System.out.println("Biggest number lengths");
-	for (int x = 1000; x < 1000; x += 1000){
+	System.out.println("Big number lengths");
+	for (int x = 1000; x < 10000; x += 1000){
 	    System.out.print("\n" + x);
-	    mergeOb.pass = 0;
+	    mergeObj.pass = 0;
 	    int[] derp = genRandomData(x);
 	    mergeObj.sort(derp);
-	    System.out.println(": " + mergeObj.pass);
+	    System.out.print(": " + mergeObj.pass);
 	}
 	System.out.println("\n----------------");
-	System.out.println("Big number lengths");
+	System.out.println("Medium number lengths");
 	for (int x = 50; x < 1050; x += 50){
 	    System.out.print("\n" + x);
 	    mergeObj.pass=0;
@@ -61,7 +61,7 @@ public class MergeSortTester
 	    System.out.print(": " + mergeObj.pass);
 	}
 	System.out.println("\n----------------");
-	System.out.println("Smaller number lengths");
+	System.out.println("Small number lengths");
 	
 	for (int x = 1; x < 20; x += 1){
 	    System.out.print("\n" + x);
