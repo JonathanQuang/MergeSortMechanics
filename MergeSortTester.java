@@ -86,6 +86,37 @@ public class MergeSortTester
 	    mergeObj.sort(derp);
 	    System.out.print(": " + mergeObj.pass);
 	}
+
+	System.out.println("\n----------------");
+	System.out.println("Revisions");
+
+	for (int x = 10000; x < 100000; x += 1000){
+	    System.out.print("\n" + x);
+	    mergeObj.pass=0;
+	    int[] derp = genRandomData(x);
+	    mergeObj.sort(derp);
+	    System.out.print(": " + mergeObj.pass);
+	}
+
+	System.out.println("\n----------------");
+
+	for (int x = 100000; x < 1000000; x += 10000){
+	    System.out.print("\n" + x);
+	    mergeObj.pass=0;
+	    int[] derp = genRandomData(x);
+	    mergeObj.sort(derp);
+	    System.out.print(": " + mergeObj.pass);
+	}
+
+	System.out.println("\n----------------");
+	
+	for (int x = 1000000; x < 10000000; x += 100000){
+	    System.out.print("\n" + x);
+	    mergeObj.pass=0;
+	    int[] derp = genRandomData(x);
+	    mergeObj.sort(derp);
+	    System.out.print(": " + mergeObj.pass);
+	}
     }//end main
 
 }//end class
