@@ -29,7 +29,7 @@
   we found that the function acurately described our experimental data.
   Do note that as an algorithm of nlog(n) becomes larger, its graph
   begins to look more and more like a line, which is why we tested 
-  the algorithm with small, medium, and large datasets.
+  the algorithm with a range of array sizes for our data.
   ======================================*/
 
 public class MergeSortTester
@@ -59,64 +59,14 @@ public class MergeSortTester
     {
 	MergeSort mergeObj = new MergeSort();
 
-	System.out.println("Big number lengths");
-	for (int x = 1000; x < 10000; x += 1000){
+	for (int x = 1; x < 1000000; x*=10){
 	    System.out.print("\n" + x);
 	    mergeObj.pass = 0;
 	    int[] derp = genRandomData(x);
 	    mergeObj.sort(derp);
 	    System.out.print(": " + mergeObj.pass);
 	}
-	System.out.println("\n----------------");
-	System.out.println("Medium number lengths");
-	for (int x = 50; x < 1050; x += 50){
-	    System.out.print("\n" + x);
-	    mergeObj.pass=0;
-	    int[] derp = genRandomData(x);
-	    mergeObj.sort(derp);
-	    System.out.print(": " + mergeObj.pass);
-	}
-	System.out.println("\n----------------");
-	System.out.println("Small number lengths");
 	
-	for (int x = 1; x < 20; x += 1){
-	    System.out.print("\n" + x);
-	    mergeObj.pass=0;
-	    int[] derp = genRandomData(x);
-	    mergeObj.sort(derp);
-	    System.out.print(": " + mergeObj.pass);
-	}
-
-	System.out.println("\n----------------");
-	System.out.println("Revisions");
-
-	for (int x = 10000; x < 100000; x += 1000){
-	    System.out.print("\n" + x);
-	    mergeObj.pass=0;
-	    int[] derp = genRandomData(x);
-	    mergeObj.sort(derp);
-	    System.out.print(": " + mergeObj.pass);
-	}
-
-	System.out.println("\n----------------");
-
-	for (int x = 100000; x < 1000000; x += 10000){
-	    System.out.print("\n" + x);
-	    mergeObj.pass=0;
-	    int[] derp = genRandomData(x);
-	    mergeObj.sort(derp);
-	    System.out.print(": " + mergeObj.pass);
-	}
-
-	System.out.println("\n----------------");
-	
-	for (int x = 1000000; x < 10000000; x += 100000){
-	    System.out.print("\n" + x);
-	    mergeObj.pass=0;
-	    int[] derp = genRandomData(x);
-	    mergeObj.sort(derp);
-	    System.out.print(": " + mergeObj.pass);
-	}
     }//end main
 
 }//end class
