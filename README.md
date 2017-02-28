@@ -17,5 +17,19 @@
 6. After obtaining all the needed data, we created 3 graphs to analyze it.
 
 ## Findings:
-Although the experimental data was not the same as the expected, the graphs show that our experimental data resembles O(n log n). When we first looked at the first and second bundles of data, the graph showed a line that looked linear. But from examining the smaller data sets, we were able to see the n log n trend.
-graphs: https://docs.google.com/document/d/1UgDZbDvZ_rrvhvvRYdqe9qpGE8ehjwqY7LRF6brvA_c/pub
+Although the experimental data was not the same as the expected, the graphs show that our experimental data resembles O(n log n). 
+What we did was we compared the difference between our experimental values and the expected values from n*log2(n), n, and n^2.
+This yielded datapoints that concerned how close the data was to the formulas.
+We then found the lines of best fit for the 3 sets of differences and the R value (AKA, the correlation coefficient). The R value
+represents how close the experimental differences are to the expected differences. An R value closest to 1 or -1 would mean that the
+applied formula was very accurate.
+
+
+
+tables and graphs: https://docs.google.com/document/d/1UgDZbDvZ_rrvhvvRYdqe9qpGE8ehjwqY7LRF6brvA_c/pub
+
+From the stastical values generated, the graph that generated the R value closest to 1 was the nlog(n) graph. This means that stastically, nlog(n) is probably the correct Big-Oh classification.
+
+Do note that due to the high values tested, the R values were all close to R. This means that a small difference in R values meant that
+the classification was more off. If we were to test using smaller numbers, the R values between the classifcations would probably be more
+noticable numerically.
